@@ -29,7 +29,8 @@ class PassengersBot
     when /start/i
       @bot.api.send_message(
         chat_id: message.chat.id,
-        text: "Hi, #{message.from.first_name}! Here you can buy a train ticket and see all your tickets you have bought before.",
+        text: "Hi, #{message.from.first_name}!\n
+               Here you can send some personal data and see the list all users data you have sent before.",
         reply_markup: @markup
       )
     when /,\s*/
